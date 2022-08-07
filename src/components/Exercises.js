@@ -23,6 +23,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         <Typography variant="h3" mb="46px">
           Showing Result
         </Typography>
+
         <Stack
           direction="row"
           sx={{ gap: { lg: "110px", xs: "50px" } }}
@@ -30,11 +31,19 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
           justifyContent="center"
         >
           {exercises.map((exercise, index) => (
-            <ExerciseCard key={index} exercise={exercise}>
-
-            </ExerciseCard>
+            <ExerciseCard key={index} exercise={exercise}></ExerciseCard>
           ))}
-          <Pagination></Pagination>
+        </Stack>
+
+        <Stack mt="100px" alignItems="center">
+          {exercises.length > 9 && (
+            <Pagination
+              color="secondary"
+              shape="rounded"
+              defaultPage={1}
+              count={Math.ceil(exercises.length / 9)}
+            />
+          )}
         </Stack>
       </Box>
     </>

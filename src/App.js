@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { Box } from "@mui/material";
 import "./App.css";
@@ -9,7 +9,7 @@ import Footer from "./components/Footer.js";
 
 function App() {
   return (
-    <Fragment>
+    <>
       <Box width="400px" sx={{ width: { xl: "1488px" } }} m="auto">
         <Navbar />
         <Routes>
@@ -18,7 +18,7 @@ function App() {
         </Routes>
         <Footer />
       </Box>
-    </Fragment>
+    </>
   );
 }
 
