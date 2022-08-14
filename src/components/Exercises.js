@@ -17,7 +17,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     setCurrentPage(value);
     window.scrollTo({ top: 1800, behavior: "smooth" });
   };
-  
+
   useEffect(() => {
     const fetchExercisesData = async () => {
       let exercisesData = [];
@@ -33,12 +33,10 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
           exerciseOptions
         );
       }
-      setExercises(exercisesData)
+      setExercises(exercisesData);
     };
-    fetchExercisesData()
+    fetchExercisesData();
   }, [bodyPart, setExercises]);
-
-  console.log(exercises);
 
   return (
     <>
